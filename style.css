@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+:root {
+  --youngSerif: 'Young Serif', system-ui;
+  --outfit: 'Outfit', sans-serif;
+
+  --white: hsl(0, 0%, 100%);
+
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+
+  --brown800: hsl(14, 45%, 36%);
+
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+
+  --textColor: hsl(15, 2%, 54%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-family: 'Young Serif', system-ui;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--brown800);
+  margin-bottom: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--outfit);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--stone600);
+}
+
+main {
+  width: 1440px;
+  height: auto;
+  padding: 124px 0;
+  margin: 0 auto;
+  background: var(--stone100);
+}
+.card {
+  width: 736px;
+  padding: 40px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 20px;
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: 13px;
+}
+
+.card h1 {
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--stone900);
+  padding: 16px 0 15px;
+  margin-bottom: 0;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.preparation-time {
+  padding: 28px;
+  background: var(--rose50);
+  border-radius: 15px;
+}
+
+.preparation-time h3 {
+  font-size: 20px;
+  color: var(--rose800);
+  padding-bottom: 11px;
+}
+
+.preparation-time ul {
+  padding: 0 22px;
+}
+.preparation-time ul li {
+  line-height: 30px;
+  padding: 0 18px;
+}
+.preparation-time ul li::marker {
+  font-size: 13px;
+  color: var(--rose800);
+}
+.preparation-time ul li span {
+  font-weight: 700;
+  color: var(--stone900);
+}
+
+.ingredients {
+  padding: 24px 0 26px;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.ingredients ul {
+  padding: 0 24px;
+}
+.ingredients ul li {
+  padding: 0 16px;
+  line-height: 31px;
+  font-weight: 600;
+  color: var(--stone600);
+}
+.ingredients ul li::marker {
+  font-size: 13px;
+  color: var(--brown800);
+}
+
+.instructions {
+  padding: 26px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.instructions ol {
+  padding-left: 24px;
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+.instructions ol li {
+  padding-left: 16px;
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+.instructions ol li span {
+  font-weight: 700;
+  color: var(--stone900);
+}
+.instructions ol li::marker {
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--brown800);
+}
+
+.nutrition {
+  padding-top: 26px;
+}
+
+.nutrition p {
+  letter-spacing: -0.16px;
+  margin-bottom: 12px;
+}
+.nutrition table {
+  width: 100%;
+}
+.nutrition table td {
+  padding: 12px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+.nutrition table td:first-child {
+  width: 50%;
+  padding-left: 30px;
+}
+.nutrition table td:last-child {
+  padding-left: 8px;
+  color: var(--brown800);
+  font-weight: 700;
+}
+
+@media (max-width: 450px) {
+  .main-area {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .card {
+    width: 375px;
+    position: relative;
+    border-radius: 0;
+    padding: 40px 31px;
+    margin: 0 auto;
+  }
+  .card img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 375px;
+    border-radius: 0;
+  }
+
+  .card h1 {
+    font-size: 36px;
+    padding: 50px 0 15px;
+    margin-top: 112px;
+  }
+  .card p {
+    letter-spacing: -0.2px;
+  }
+
+  .preparation-time {
+    padding: 22px;
+  }
+
+  .preparation-time ul li:not(:last-child) {
+    padding-bottom: 8px;
+    line-height: 22px;
+  }
+  .ingredients {
+    padding: 22px 0 26px;
+  }
+  .ingredients ul {
+    padding: 0 22px;
+  }
+
+  .instructions {
+    padding-bottom: 14px;
+  }
+  .instructions ol li {
+    padding-left: 14px;
+  }
+  .nutrition {
+    padding-top: 25px;
+  }
+  .nutrition p {
+    letter-spacing: 0;
+  }
+}
