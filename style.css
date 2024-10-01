@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'Outfit';
   src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Young Serif';
   src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  font-display: swap;
 }
 
 :root {
@@ -23,8 +25,6 @@
 
   --rose800: hsl(332, 51%, 32%);
   --rose50: hsl(330, 100%, 98%);
-
-  --textColor: hsl(15, 2%, 54%);
 }
 *,
 *::before,
@@ -42,7 +42,7 @@ body {
 h1,
 h2 {
   font-family: 'Young Serif', system-ui;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--brown800);
   margin-bottom: 18px;
@@ -82,14 +82,14 @@ main {
 
 .card h1 {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: var(--stone900);
   padding: 16px 0 15px;
   margin-bottom: 0;
 }
 
 p {
-  line-height: 24px;
+  line-height: 1.5rem;
   margin-bottom: 30px;
 }
 
@@ -100,7 +100,7 @@ p {
 }
 
 .preparation-time h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--rose800);
   padding-bottom: 11px;
 }
@@ -109,11 +109,11 @@ p {
   padding: 0 22px;
 }
 .preparation-time ul li {
-  line-height: 30px;
+  line-height: 1.875rem;
   padding: 0 18px;
 }
 .preparation-time ul li::marker {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--rose800);
 }
 .preparation-time ul li span {
@@ -131,12 +131,12 @@ p {
 }
 .ingredients ul li {
   padding: 0 16px;
-  line-height: 31px;
+  line-height: 1.9375rem;
   font-weight: 600;
   color: var(--stone600);
 }
 .ingredients ul li::marker {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--brown800);
 }
 
@@ -147,12 +147,12 @@ p {
 
 .instructions ol {
   padding-left: 24px;
-  line-height: 24px;
+  line-height: 1.5rem;
   padding-bottom: 8px;
 }
 .instructions ol li {
   padding-left: 16px;
-  line-height: 24px;
+  line-height: 1.5rem;
   padding-bottom: 8px;
 }
 .instructions ol li span {
@@ -160,9 +160,11 @@ p {
   color: var(--stone900);
 }
 .instructions ol li::marker {
-  font-family: sans-serif;
   font-weight: 700;
   color: var(--brown800);
+}
+.instructions ol li:first-child::marker {
+  font-family: sans-serif;
 }
 
 .nutrition {
@@ -213,7 +215,7 @@ p {
   }
 
   .card h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
     padding: 50px 0 15px;
     margin-top: 112px;
   }
@@ -227,7 +229,7 @@ p {
 
   .preparation-time ul li:not(:last-child) {
     padding-bottom: 8px;
-    line-height: 22px;
+    line-height: 1.375rem;
   }
   .ingredients {
     padding: 22px 0 26px;
